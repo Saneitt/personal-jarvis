@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111615"><title>Personal Jarvis — At your service</title><meta name="description" content="A voice-controlled personal assistant prototype by Sannith Vanamala."><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body data-phase="idle">
+<div class="assistant-shell">
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Jarvis home"><span class="brand-mark"></span><span>JARVIS<small>PERSONAL ASSISTANT</small></span></a>
+  <div class="top-status"><span class="signal-dot"></span><span>Systems ready</span><span class="top-divider"></span><span>08:30 <small>IST</small></span></div>
+  <nav class="utility-nav" aria-label="Assistant controls"><button id="sound-button" class="icon-button" aria-label="Mute assistant voice" title="Assistant voice"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4zM17 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg></button><button data-panel="memory" class="icon-button" aria-label="Open memory" title="Memory"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg></button><button data-panel="activity" class="icon-button" aria-label="Open activity" title="Activity"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2-5M3 3v5h5M12 7v5l3 2"/></svg></button></nav>
+</header>
+<main class="main-layout">
+  <section class="presence" aria-label="Jarvis voice assistant">
+    <div class="greeting"><div class="eyebrow">J / 01 <span></span> ONLINE</div><h1 id="greeting">Welcome back, Captain.</h1><p id="greeting-detail">What are we working on today?</p></div>
+    <div class="voice-stage">
+      <div class="orbit-field" aria-hidden="true"><div class="ambient-light"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="orbit orbit-d"></div><div class="orbit orbit-e"></div><div class="orbit orbit-f"></div><span class="satellite sat-a"></span><span class="satellite sat-b"></span><span class="satellite sat-c"></span><div class="core-lens"></div><div class="core-rim"></div><div class="signal-axis"></div></div>
+      <button id="voice-button" class="voice-trigger" aria-label="Speak to Jarvis"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3ZM6 10v2a6 6 0 0 0 12 0v-2M12 18v3m-3 0h6"/></svg></button>
+      <div class="orb-coordinate coord-left" aria-hidden="true">VOICE LINK<br><b>STANDBY</b></div><div class="orb-coordinate coord-right" aria-hidden="true">JARVIS<br><b>01.0</b></div>
+    </div>
+    <div class="voice-feedback" aria-live="polite"><div class="voice-state"><span class="state-dot"></span><span id="voice-state">At your service, sir.</span></div><p id="response-caption" hidden></p><p id="heard-caption" class="heard-caption" hidden></p></div>
+    <div class="voice-command"><button id="speak-label">Speak to Jarvis <span>↗</span></button><span id="voice-hint">Tap the core or press <kbd>Space</kbd></span></div>
+    <div class="presence-footer"><span class="private-signal"><i></i>Listening only when invited</span><button id="demo-button" aria-expanded="false" aria-controls="demo-menu">Preview a command <span>⌁</span></button></div>
+    <div id="demo-menu" class="demo-menu" hidden><div class="demo-menu-head"><span class="eyebrow">SAMPLE VOICE COMMANDS</span><button id="close-demo" aria-label="Close sample commands">×</button></div><button data-demo="focus">“Find ninety minutes for my portfolio.” <span>↗</span></button><button data-demo="afternoon">“Arrange my afternoon, Jarvis.” <span>↗</span></button><button data-demo="tomorrow">“Keep tomorrow morning free for learning.” <span>↗</span></button><p>Demonstration only. No microphone required.</p></div>
+  </section>
+  <aside class="day-panel" aria-label="Schedule and action review">
+    <div class="day-heading"><div><span class="eyebrow">YOUR SCHEDULE</span><h2>Tuesday, 13 October</h2></div><button data-panel="context" class="icon-button" aria-label="Inspect context sources" title="Context sources"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/><circle cx="8" cy="5" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="19" r="2"/></svg></button></div>
+    <div class="week-strip" aria-label="Example week"><span><small>MON</small>12</span><span class="selected"><small>TUE</small>13<i></i></span><span><small>WED</small>14</span><span><small>THU</small>15</span><span><small>FRI</small>16</span><span><small>SAT</small>17</span><span><small>SUN</small>18</span></div>
+    <div class="next-alert"><span class="alert-mark"></span><div><span>NEXT UP</span><p>Design review <small>in 30 min</small></p></div></div>
+    <div id="action-review" hidden></div>
+    <div class="schedule"><div class="schedule-row"><time>09:00</time><i></i><div><h3>Design review</h3><p>45 min <span>·</span> Fixed</p></div><span class="event-glyph">↗</span></div><div class="free-window"><span>10:00—14:00</span><div><i></i>Open window</div></div><div class="schedule-row"><time>14:00</time><i class="muted"></i><div><h3>Project check-in</h3><p>30 min <span>·</span> Fixed</p></div><span class="event-glyph">↗</span></div><div class="schedule-row"><time>17:30</time><i class="amber"></i><div><h3>Workout</h3><p>60 min <span>·</span> Flexible</p></div><span class="event-glyph">↗</span></div></div>
+    <div class="section-caption">REMINDERS <span>02</span></div><div class="reminder"><span class="reminder-icon">⌁</span><span>Groceries</span><small>On the way home</small></div><div class="reminder"><span class="reminder-icon">◷</span><span>Portfolio case study</span><small>This week</small></div>
+    <div id="scheduled-changes"></div><div class="day-insight"><span>✳</span><p id="schedule-insight">4 hours clear before your next meeting.</p></div><div class="sample-note"><span>Example schedule · IST</span><button id="reset-demo" aria-label="Reset demo" title="Reset demo">↺</button></div>
+  </aside>
+</main>
+<footer class="app-footer"><span>PERSONAL JARVIS <i> / </i> INTERACTIVE PROTOTYPE</span><a href="case-study.html">Behind the design <span>↗</span></a></footer>
+</div>
+<div id="panel-backdrop" class="panel-backdrop" hidden></div><aside id="detail-panel" class="detail-panel" aria-labelledby="panel-title" role="dialog" aria-modal="true" hidden><div class="panel-head"><span class="eyebrow" id="panel-kicker">ASSISTANT SETTINGS</span><button id="close-panel" class="icon-button" aria-label="Close panel">×</button></div><h2 id="panel-title"></h2><div id="panel-content"></div></aside>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>

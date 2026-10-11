@@ -1,0 +1,16 @@
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+coverage/
+*.log
+
+# Local editor, OS, and hosting metadata
+.vscode/
+.idea/
+.openai/
+.DS_Store
+Thumbs.db
