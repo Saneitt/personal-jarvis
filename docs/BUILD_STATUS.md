@@ -58,3 +58,5 @@ Evidence: data/voice-comparison/results.json and WAVs, data/ui-voice-verificatio
 - Public portfolio card and case study now describe the working application. The one-page product design resume was updated, exported with Microsoft Word and visually checked with Poppler.
 
 Additional evidence: data/shutdown-verification.json, data/calendar-ui-verification.json, data/voice-calendar-verification.json and data/calendar-final-ui.json. Public screenshots use a temporary sample calendar entry, removed after capture.
+
+The native host permits audio for its trusted local page before a web gesture, so due reminders can sound on a fresh launch. The release publisher uses subprocess return codes rather than treating a missing initial GitHub release as a PowerShell error.

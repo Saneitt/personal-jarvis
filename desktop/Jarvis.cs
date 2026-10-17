@@ -82,7 +82,7 @@ internal sealed class JarvisWindow : Form {
             if(closing)return;
             view=new WebView2();view.Dock=DockStyle.Fill;view.DefaultBackgroundColor=BackColor;
             Controls.Add(view);view.BringToFront();
-            var options=new CoreWebView2EnvironmentOptions(test?"--remote-debugging-port=9223":null);
+            var options=new CoreWebView2EnvironmentOptions("--autoplay-policy=no-user-gesture-required"+(test?" --remote-debugging-port=9223":""));
             var environment=await CoreWebView2Environment.CreateAsync(null,Path.Combine(Program.Root,"data","webview"),options);
             if(closing)return;
             await view.EnsureCoreWebView2Async(environment);
