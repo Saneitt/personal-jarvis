@@ -1,16 +1,14 @@
-# Local secrets and configuration
-.env
-.env.*
-!.env.example
-
-# Dependencies and generated output
-node_modules/
-coverage/
+.venv/
+.runtime/
+models/
+data/
+__pycache__/
+.pytest_cache/
+*.pyc
 *.log
+config.local.json
 
-# Local editor, OS, and hosting metadata
-.vscode/
-.idea/
-.openai/
-.DS_Store
-Thumbs.db
+
+dist/
+output/
+release-notes/

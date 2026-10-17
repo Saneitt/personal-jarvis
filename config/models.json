@@ -1,0 +1,56 @@
+[
+  {
+    "source": "qwen3.5:0.8b",
+    "profile": "jarvis-local:0.8b",
+    "label": "Tiny / 0.8B",
+    "ram_gb": 8,
+    "vram_gb": 0,
+    "download_gb": 1.2,
+    "description": "For basic conversation on limited hardware; complex tool use is less dependable."
+  },
+  {
+    "source": "qwen3.5:2b",
+    "profile": "jarvis-local:2b",
+    "label": "Light / 2B",
+    "ram_gb": 8,
+    "vram_gb": 0,
+    "download_gb": 2.7,
+    "description": "A lighter starting point for CPU-only or entry-level PCs."
+  },
+  {
+    "source": "qwen3.5:4b",
+    "profile": "jarvis-local:4b",
+    "label": "Balanced / 4B",
+    "ram_gb": 16,
+    "vram_gb": 4,
+    "download_gb": 3.3,
+    "description": "Recommended for 16 GB RAM / 4 GB NVIDIA VRAM. Tested on the development laptop."
+  },
+  {
+    "source": "qwen3.5:9b",
+    "profile": "jarvis-local:9b",
+    "label": "Capable / 9B",
+    "ram_gb": 24,
+    "vram_gb": 8,
+    "download_gb": 6.6,
+    "description": "More capacity for stronger PCs; 12 GB VRAM gives useful headroom."
+  },
+  {
+    "source": "qwen3.5:27b",
+    "profile": "jarvis-local:27b",
+    "label": "Advanced / 27B",
+    "ram_gb": 48,
+    "vram_gb": 24,
+    "download_gb": 17,
+    "description": "For high-memory desktops. Significantly larger download and memory use."
+  },
+  {
+    "source": "qwen3.5:35b",
+    "profile": "jarvis-local:35b",
+    "label": "Enthusiast / 35B MoE",
+    "ram_gb": 64,
+    "vram_gb": 32,
+    "download_gb": 22,
+    "description": "For workstations. All expert weights still need memory; benchmark voice latency."
+  }
+]
